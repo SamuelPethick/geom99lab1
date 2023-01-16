@@ -64,7 +64,7 @@ _The API Keys you must use are provided in Desire2Learn Geom99 class. It is not 
 
 #### Sharkspotter
 
--
+- https://samuelpethick.github.io/geom99lab1/mymaps/sharkspotters.html
 
 #### Simple HTML Map
 
