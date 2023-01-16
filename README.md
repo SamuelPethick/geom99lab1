@@ -30,7 +30,7 @@ In this repository you will need to create content in this repository from the f
 
 - [x] Google MyMaps Sharkspotters tutorial. 
 - [x] Maps - Simple HTML Map Example
-- [ ] Routes - Directions API - URL request JSON response
+- [x] Routes - Directions API - URL request JSON response
 - [ ] Modify Dynamic Map Clustering example to show Ontario Parks
 - [ ] Create your Story using Google Dynamic Maps (JavaScript) in the provided folder
 
@@ -72,7 +72,7 @@ _The API Keys you must use are provided in Desire2Learn Geom99 class. It is not 
 
 #### Routes
 
--
+- https://samuelpethick.github.io/geom99lab1/services/mydirections.md.txt
 
 #### Clustering
 
