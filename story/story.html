@@ -24,15 +24,224 @@
           padding: 0;
         }
     </style>
-    <script>
-      let map;
+    <script>     
 
       function initMap() {
-        map = new google.maps.Map(document.getElementById("map"), {
-          center: { lat: 45.557640, lng: -79.225873 },
-          zoom: 15,
+        const map = new google.maps.Map(document.getElementById("map"), {
+          center: { lat: 45.559627, lng:-79.223435 },
+          zoom: 16,
+          mapTypeId: "satellite"
         });
-      }
+        
+        {const contentString =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">Welcome to Kearney Ontario</h1>' +
+    '<div id="bodyContent">' +
+    "<p><b>This is my Grandmother's Hometown!</b> My Grandmother, Edith Macro (Maiden name: Huffman) was born January 20th 1928 (She is now 95!)." +
+    " This marker is placed on the house that she grew up in. Though she would travel a lot in her life, " + 
+    "she always carried the character of this town with her. This map will be a tour of my personal experiences in Kearney </p>"
+    "</div>" +
+    "</div>";
+  const infowindow = new google.maps.InfoWindow({
+    content: contentString,
+    ariaLabel: "Grandma's house",
+  });
+        
+  const marker = new google.maps.Marker({
+    position: {lat: 45.557640, lng:-79.225873},
+    map,
+    title: "Grandma's House",
+    label: "1"
+  });
+  marker.addListener("click", () => {
+    infowindow.open({
+      anchor: marker,
+      map,
+    });
+  });    
+}
+  
+{const contentString =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">Big Blue</h1>' +
+    '<div id="bodyContent">' +
+    "<p><b>My first time in Kearney, </b> we rented this cottage which called I Big Blue. We visited with my "+
+    "Grandmother in 2012 so she could see her brother's 60th wedding aniversary. I had always thought I had a small family, " +
+    "this was the weekend I learned how large it really was. My Grandmother's sister also came to visit with her family from Australia </p>"
+    "</div>" +
+    "</div>";
+  const infowindow = new google.maps.InfoWindow({
+    content: contentString,
+    ariaLabel: "Big Blue",
+  });
+        
+  const marker =  new google.maps.Marker({
+    position: {lat: 45.556734, lng:-79.225593},
+    map,
+    title: "Big Blue",
+    label: "2"
+  });
+  marker.addListener("click", () => {
+    infowindow.open({
+      anchor: marker,
+      map,
+    });
+  });    
+}
+
+{const contentString =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">Unnamed Beach</h1>' +
+    '<div id="bodyContent">' +
+    "<p> This beach was just a block away from Big Blue and I always loved to swim as a kid so this was where we spent a lot of our free time. " +
+    "Aside from our annual camping trip to Balsam Lake my mother couldn't afford many vacations back in the day, so this was a real treat. </p>"
+    "</div>" +
+    "</div>";
+  const infowindow = new google.maps.InfoWindow({
+    content: contentString,
+    ariaLabel: "Beach",
+  });
+        
+  const marker =  new google.maps.Marker({
+    position: {lat: 45.557189, lng:-79.224006},
+    map,
+    title: "Beach",
+    label: "3"
+  });
+
+  marker.addListener("click", () => {
+    infowindow.open({
+      anchor: marker,
+      map,
+    });
+  });    
+}
+
+{const contentString =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">Uncle Doug and Aunt Gene</h1>' +
+    '<div id="bodyContent">' +
+    "<p> This church was the venue of their 60th wedding anniversary. This was the first place I met much of my extended family." +
+    " My Grandmother's sister, Aunt Diance and her husband Uncle John brought their relatives from Australia, which included my cousins who are around my age. They taught me Australian lingo like the phrase 'fair dinkum' (which is similar to saying 'eh') </p>"
+    "</div>" +
+    "</div>";
+  const infowindow = new google.maps.InfoWindow({
+    content: contentString,
+    ariaLabel: "60th Anniversary",
+  });
+        
+  const marker =  new google.maps.Marker({
+    position: {lat: 45.556517, lng:-79.218143},
+    map,
+    title: "60th Anniversary",
+    label: "4"
+  });
+
+  marker.addListener("click", () => {
+    infowindow.open({
+      anchor: marker,
+      map,
+    });
+  });    
+}
+
+{const contentString =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    "<h1 id='firstHeading' class='firstHeading'>Aunt Jill's Cottage </h1>" +
+    '<div id="bodyContent">' +
+    "<p> This cottage belongs to my mother's cousin Jill, who is the daughter of Doug and Gene. It is the last cottage our family owns in Kearnery but still serves to bring the family together in the summer. It is situated on the Magnetawan River and has a boat launch making it an excellent spot for water activities of all kinds. </p>"
+    "</div>" +
+    "</div>";
+  const infowindow = new google.maps.InfoWindow({
+    content: contentString,
+    ariaLabel: "Aunt Jill's Cottage",
+  });
+        
+  const marker =  new google.maps.Marker({
+    position: {lat: 45.564959, lng:-79.223071},
+    map,
+    title: "Aunt Jill's Cottage",
+    label: "5"
+  });
+
+  marker.addListener("click", () => {
+    infowindow.open({
+      anchor: marker,
+      map,
+    });
+  });    
+}
+
+{const contentString =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    "<h1 id='firstHeading' class='firstHeading'>Australian Cottage </h1>" +
+    '<div id="bodyContent">' +
+    "<p> During the anniversary our cousins from Australia rented this cottage across from Aunt Jill's. We kids would swim back and forth between the two cottages. This cottage also had a diving pad where we would play King of the Hill. </p>"
+    "</div>" +
+    "</div>";
+  const infowindow = new google.maps.InfoWindow({
+    content: contentString,
+    ariaLabel: "Australian Cottage",
+  });
+        
+  const marker =  new google.maps.Marker({
+    position: {lat: 45.564272, lng:-79.221883},
+    map,
+    title: "Australian Cottage",
+    label: "6"
+  });
+
+  marker.addListener("click", () => {
+    infowindow.open({
+      anchor: marker,
+      map,
+    });
+  });    
+}
+
+{const contentString =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    "<h1 id='firstHeading' class='firstHeading'>Rest in Peace Uncle Doug</h1>" +
+    '<div id="bodyContent">' +
+    "<p> A few years after my first trip we would go up again, this time on a grim note. This is the church where the service was held for the man whom I can thank for giving me my cousins. Rest in Peace, Uncle Doug</p>"
+    "</div>" +
+    "</div>";
+  const infowindow = new google.maps.InfoWindow({
+    content: contentString,
+    ariaLabel: "Funeral Service",
+  });
+        
+  const marker =  new google.maps.Marker({
+    position: {lat: 45.556420, lng:-79.223311},
+    map,
+    title: "Funeral Service",
+    label: "7"
+  });
+
+  marker.addListener("click", () => {
+    infowindow.open({
+      anchor: marker,
+      map,
+    });
+  });    
+} 
+  
+}
+window.initMap = initMap;
     </script>
   </head>
   <body>
@@ -40,7 +249,8 @@
     
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
     <!-- *** STUDENTS: Replace YOUR_API_KEY text with provided key in class for property src in next line *** -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w&callback=initMap&v=weekly" async>
+    <!-- Remember to change API Key-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w=weekly" async>
     </script>
   </body>
 </html>
